@@ -11,7 +11,7 @@ const Navigation = () => {
     const dispatch = useDispatch();
 
     const search = () => {
-        dispatch(getAsyncCoins(searchValue));
+        dispatch(getAsyncCoins(searchValue.toLowerCase()));
     }
 
     const enterSearch = (e) => {
