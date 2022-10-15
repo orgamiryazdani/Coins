@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Dirooz";
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #1b1f24;
+}
+
+@font-face {
+  font-family: "Dirooz"; /*Can be any text*/
+  src: local("Dirooz"), url("./fonts/Dirooz.woff") format("woff");
+}
+
+/* width */
+::-webkit-scrollbar {
+  padding-right: 50px;
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #1b1f24;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0d0e10;
+}
+
+.dir{
+  direction: ltr;
+}

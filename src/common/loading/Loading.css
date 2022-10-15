@@ -1,0 +1,84 @@
+.body {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  opacity: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #1d1e2c;
+}
+
+.spin-loading {
+  height: 70px;
+  width: 70px;
+  border: 6px solid #3fc1c936;
+  display: inline-block;
+  border-top-color: #fc5185;
+  animation: 1.5s spin infinite ease-in-out;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  -webkit-animation: 1.5s spin infinite ease-in-out;
+}
+
+.dot-loading {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+
+.dot-loading > div {
+  height: 24px;
+  width: 24px;
+  background: #fc5185;
+  animation: 1.5s bounce infinite ease;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  -webkit-animation: 1.5s bounce infinite ease;
+}
+
+.dot-loading .dot2 {
+  animation-delay: 150ms;
+}
+
+.dot-loading .dot3 {
+  animation-delay: 300ms;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  80%,
+  100% {
+    background: #3fc1c9;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+  }
+  40% {
+    background: #fc5185;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+  }
+}
